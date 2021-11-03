@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+target 'Nuvo' do
+  use_frameworks!
+
+  #logs
+  pod 'ShipBookSDK'
+
+  #used for showing toasts on the login screen
+  pod 'Toast-Swift', '~> 5.0.1'
+  
+  #sweepr sdk
+  pod 'SweeprSDK', :http => 'http://sdk.sweepr.com/ios/sweepr-mobile-1.7.9.zip'
+  
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
+  end
+end
