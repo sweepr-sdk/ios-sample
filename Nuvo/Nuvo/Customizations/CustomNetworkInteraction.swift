@@ -31,7 +31,7 @@ public class CustomNetworkInteraction: NSObject {
     }
 }
 
-extension CustomNetworkInteraction: SweeprInteractorProtocol {
+extension CustomNetworkInteraction: SweeprInteractorDelegate {
 
     public var networkDescriptor: SweeprNetworkingDescriptor? {
         return self
