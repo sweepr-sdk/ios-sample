@@ -11,7 +11,7 @@ target 'Nuvo' do
   pod 'Toast-Swift', '~> 5.0.1'
   
   #sweepr sdk
-  pod 'SweeprSDK', :http => 'https://sdk.sweepr.com/ios/sweepr-mobile-1.8.0.zip'
+  pod 'SweeprSDK', :http => 'https://sdk.sweepr.com/ios/sweepr-mobile-1.8.0.66.zip'
   
 end
 

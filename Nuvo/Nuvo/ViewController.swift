@@ -26,12 +26,16 @@ class ViewController: UIViewController {
   }
 
   func setupSweepr() {
-    SweeprClient.updateConfig(with: userDidRequestedLogoutHandler)
+    SweeprClient.authenticationDelegate = self
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    ssoLoginButton.isHidden = SweeprClient.themeManager.config.ssoConfig == nil
+
+    let hasSSO = SweeprClient.themeManager.config.ssoConfig != nil
+
+    ssoLoginButton.isHidden = !hasSSO
+    navigationController?.setNavigationBarHidden(!hasSSO, animated: false)
 
     setupSweepr()
   }
@@ -119,10 +123,16 @@ extension ViewController : UITextFieldDelegate {
     }
 }
 
-extension ViewController {
+extension ViewController: AuthenticationDelegate {
+    func login() {
+        loginUser(loginBtn)
+    }
 
-  func userDidRequestedLogoutHandler() {
-    SweeprClient.loginManager.logout()
-    SweeprClient.view.removeFromSuperview()
-  }
+    func handleSessionFailure(error: NSError) {
+    }
+
+    func logout() {
+        SweeprClient.loginManager.logout()
+        SweeprClient.view.removeFromSuperview()
+    }
 }
