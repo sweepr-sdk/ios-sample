@@ -51,9 +51,9 @@ class ViewController: UIViewController {
     //hiding the button to show loader in it's place
     sender.isHidden = true
     
-    SweeprClient.loginManager.loginAndFetchProfile(userName: userName, password: password) { (success, error) in
-        self.hideLoaders(sender)
-        if let error = error {
+      SweeprClient.authenticate(email: userName, password: password, accountUniqueNumber: "", ssid: "iosapp") { error in
+          self.hideLoaders(sender)
+          if let error = error {
             if (error.code == 401) {
                 self.view.makeToast("Invalid credentials")
             } else {

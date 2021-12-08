@@ -1,11 +1,11 @@
 PODS:
   - ShipBookSDK (1.1.17)
-  - SweeprSDK (1.8.1)
+  - SweeprSDK (1.8.2)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - ShipBookSDK
-  - "SweeprSDK (from `{:http=>\"https://sdk.sweepr.com/ios/sweepr-mobile-1.8.1.67.zip\"}`)"
+  - "SweeprSDK (from `{:http=>\"https://sdk.sweepr.com/ios/sweepr-mobile-1.8.2.68.zip\"}`)"
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
@@ -15,17 +15,17 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   SweeprSDK:
-    :http: https://sdk.sweepr.com/ios/sweepr-mobile-1.8.1.67.zip
+    :http: https://sdk.sweepr.com/ios/sweepr-mobile-1.8.2.68.zip
 
 CHECKOUT OPTIONS:
   SweeprSDK:
-    :http: https://sdk.sweepr.com/ios/sweepr-mobile-1.8.1.67.zip
+    :http: https://sdk.sweepr.com/ios/sweepr-mobile-1.8.2.68.zip
 
 SPEC CHECKSUMS:
   ShipBookSDK: bfc42a2f64eaef8ff7858d33f65b1c6cb0111b3a
-  SweeprSDK: e65bf566f314ff8ffabd105f61e42a13fe0ee7f3
+  SweeprSDK: 1d62c94a4300cfd7d99eb2c58cb0af2836d81841
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 12ab30e281b97164cbcfb724ee39f939308ba92f
+PODFILE CHECKSUM: b82a4df3f8bd6c63437008988fa151ff8a22911b
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.1

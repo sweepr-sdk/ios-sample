@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                              userAgent: serverConfig.userAgent)
     let config = SweeprConfiguration(serverConfig: serverConfig, mqttConfig: mqttConfig,
                                      appName: BuildConfig.APP_NAME,
-                                     assetsOverwrite: .default,
+                                     assetsOverwrite: .default, sourceAssetsZip: "assets.zip",
                                      showMenu: true)
 
     #if targetEnvironment(simulator)
