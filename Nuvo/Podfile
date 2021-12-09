@@ -9,10 +9,9 @@ target 'Nuvo' do
 
   #used for showing toasts on the login screen
   pod 'Toast-Swift', '~> 5.0.1'
-  
-  #sweepr sdk
-  pod 'SweeprSDK', :http => 'https://sdk.sweepr.com/ios/sweepr-mobile-1.8.2.68.zip'
 
+  #sweepr sdk
+pod 'SweeprSDK', :http => 'https://sdk.sweepr.com/ios/sweepr-mobile-1.8.2.69.zip'
 end
 
 post_install do |installer|
