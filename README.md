@@ -16,15 +16,14 @@ To quickly build the app:
     $ cd Nuvo
     ```
 
-1. Install dependencies 
+1. Install dependencies
 
     ```shell
     $ pod install
     ```
 
-1. Build & run the `Nuvo.xcworkspace` in Xcode 12.5.1
+1. Build & run the `Nuvo.xcworkspace` in Xcode 13.1
 
 
 ===
 Sweepr Technologies 2021
-
